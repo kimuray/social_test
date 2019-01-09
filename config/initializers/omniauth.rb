@@ -3,4 +3,5 @@ Rails.application.config.middleware.use OmniAuth::Builder do
   {
     scope: 'openid profile email address'
   }
+  provider :google_oauth2, ENV['GOOGLE_KEY'], ENV['GOOGLE_SECRET']
 end
